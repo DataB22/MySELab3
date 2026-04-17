@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Office Equipment Management</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<div class="navbar">
+    <a th:href="@{/main}" class="nbutton">Home</a>
+    <div>Office Equipment Sales</div>
+    <a th:href="@{/home}" class="nbutton">Profile</a>
+</div>
+<div class="container">
+    <div class="text-content">
+        <h1>Profile</h1>
+    </div>
+
+    <div class="header" style="text-align: center;">
+        <div th:unless="${username}" class="login-link">
+            <a th:href="@{/login}" class="button" style="text-align: center;">Login</a>
+        </div>
+        <div th:if="${username}" class="user-info" style="display: flex; align-items: center;">
+            <h2>
+                Welcome to Office Equipment Sales, <span th:text="${username}"></span>
+            </h2>
+        </div>
+        <form th:action="@{/logout}" class="logout" method="post" style="display: inline;">
+            <button type="submit" class="button delete" >Logout</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

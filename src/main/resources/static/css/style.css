@@ -1,0 +1,266 @@
+/* Загальні стилі */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #22273E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Отступы от краев панели */
+    box-sizing: border-box;
+    height: 75px; /* Высота панели, можно настроить по желанию */
+    z-index: 1000; /* Чтобы панель находилась поверх остальных элементов */
+}
+.navbar div {
+    color: #D9D9D9;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+}
+.nbutton {
+    display: inline-block;
+    background-color: #D9D9D9;
+    color: #22273E;
+    padding: 15px 40px;
+    margin: 0 10px; /* Додаємо відступ між кнопками */
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, text-decoration 0.3s ease;
+}
+.nbutton:hover {
+    background: #22273E; /* Світлий фон */
+    color: #D9D9D9; /* Зміна кольору тексту */
+    border-color: #D9D9D9; /* Додаємо кольорову рамку */
+    text-decoration: underline; /* Підкреслення */
+}
+.navbar div:first-child {
+    margin-right: auto; /* Кнопка Home слева */
+}
+
+.navbar div:last-child {
+    margin-left: auto; /* Кнопка Logout справа */
+}
+
+body {
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 300;
+    background-color: #BABABA;
+    margin: 0;
+    padding: 0;
+    color: #293b4a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+}
+.warning {
+    color: red;
+    background-color: #D9D9D9;
+    border: 1px solid #f36112;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+/* Контейнер */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px;
+    background: #D9D9D9;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.container:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Заголовки */
+h1, h2, h3 {
+    color: #22273E;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+/* Стилі форм */
+.form-container {
+    background: #D9D9D9;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.form-container input,
+.form-container select {
+    width: 87%;
+    padding: 14px 16px;
+    margin-bottom: 25px;
+    border: 1px solid #b0c4de;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #f8f9fa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+    border-color: #D9D9D9;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+/* Стилі таблиць */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #D9D9D9;
+}
+
+table th,
+table td {
+    padding: 20px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-size: 1.1rem;
+}
+
+table th {
+    background: #22273E;
+    color: #D9D9D9;
+    font-weight: 700;
+}
+
+table tr:nth-child(even) {
+    background: #f2f4f8;
+}
+
+table tr:hover {
+    background: #ecf0f1;
+    transition: background 0.3s ease;
+}
+.actions {
+    display: flex;
+    gap: 10px; /* Відстань між кнопками */
+    justify-content: center; /* Вирівнювання по центру */
+}
+
+/* Кнопки */
+.button {
+    display: inline-block;
+    background-color: #22273E;
+    color: #D9D9D9;
+    padding: 15px 40px;
+    margin-top: 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.button:hover {
+    background: #D9D9D9; /* Світлий фон */
+    color: #22273E; /* Зміна кольору тексту */
+    border-color: #22273E; /* Додаємо кольорову рамку */
+    text-decoration: underline; /* Підкреслення */
+}
+
+.button.edit:hover {
+    background: #D9D9D9; /* Світлий фон */
+    color: #22273E; /* Зміна кольору тексту */
+    border-color: #22273E; /* Додаємо кольорову рамку */
+    text-decoration: underline; /* Підкреслення */
+}
+
+.button.delete:hover {
+    background: #D9D9D9; /* Світлий фон */
+    color: #22273E; /* Зміна кольору тексту */
+    border-color: #22273E; /* Додаємо кольорову рамку */
+    text-decoration: underline; /* Підкреслення */
+}
+.button-group {
+    display: grid;
+}
+.button.edit {
+    background: yellow;
+    color: #22273E;
+}
+
+.button.delete {
+    background: red;
+    color: #D9D9D9
+}
+
+/* Помилки */
+.error {
+    color: #e74c3c;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links {
+    text-align: center; /* Центрування тексту */
+    margin-top: 20px; /* Відступ зверху */
+    font-size: 1rem; /* Розмір тексту */
+
+}
+
+.links a {
+    color: #22273E; /* Колір тексту */
+    text-decoration: none; /* Забираємо підкреслення */
+    font-weight: 500; /* Напівжирний шрифт */
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Анімація при наведенні */
+}
+
+.links a:hover {
+    color: #ffffff; /* Колір при наведенні */
+    text-decoration: underline; /* Підкреслення при наведенні */
+}
+
+.button-row {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 25px;
+    background: #22273E;
+    color: #D9D9D9;
+    border-radius: 20px;
+}
+
+.blockk {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px;
+    background: #BABABA;
+    border-radius: 20px;
+}

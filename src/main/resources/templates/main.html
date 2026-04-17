@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Office Equipment Sales</title>
+  <link rel="stylesheet" th:href="@{/css/style.css}" />
+</head>
+<body>
+<div class="navbar">
+  <a th:href="@{/main}" class="nbutton">Home</a>
+  <div>Office Equipment Sales</div>
+  <a th:href="@{/home}" class="nbutton">Profile</a>
+</div>
+<div>
+  <div class="button-row" style="margin-top: 85px; margin-bottom: 10px;">
+    <a th:href="@{/cities}" class="nbutton">Cities</a>
+    <a th:href="@{/shops}" class="nbutton">Shops</a>
+    <a th:href="@{/products}" class="nbutton">Products</a>
+  </div>
+  <img th:src="${pic1}" alt="Image 1" style="width: 100%">
+  <div class="button-row" style="margin-top: 15px;">
+    <div>Office Equipment Sales</div>
+  </div>
+  <div class="blockk" style="display: flex" >
+    <div class="button-row" style="max-width: 350px">
+      <a th:href="@{/cities}" class="button-row">City</a>
+      <div style="padding-top: 15px">This table represents the cities where the company operates. Covering a wide range of locations, the company ensures that customers in numerous cities have access to premium office equipment. With a commitment to expanding its reach, the company is dedicated to meeting the needs of businesses across diverse urban areas, ensuring local availability and support.</div>
+    </div>
+    <div class="button-row" style="background: #D9D9D9; color: #22273E; max-width: 350px;">
+      <a th:href="@{/shops}" >Shop</a>
+      <div style="padding-top: 15px">The shop table contains information about the various stores in the company network. Each store boasts highly qualified personnel who provide expert guidance and personalized assistance. Equipped with a welcoming atmosphere and an unwavering commitment to customer satisfaction, these shops are the go-to destinations for businesses seeking reliable office equipment solutions.</div>
+    </div>
+    <div class="button-row" style="max-width: 350px">
+      <a th:href="@{/products}" class="button-row">Product</a>
+      <div style="padding-top: 15px">This table lists the products offered by the company, showcasing a range of high-quality office equipment designed to meet the demands of modern workplaces. From innovative designs to energy-efficient solutions, the products stand out for their reliability, durability, and advanced features. Every product is carefully selected to ensure customer satisfaction and optimal performance.</div>
+    </div>
+  </div>
+  <img th:src="${pic2}" alt="Image 2" style="width: 100%; height: auto;">
+  <div style="text-align: center; margin-bottom: 40px ">
+    &copy; 2024. Office Equipment Sales. All rights reserved.
+  </div>
+</div>
+</body>
+</html>
